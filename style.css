@@ -1,0 +1,120 @@
+/* Base styles for the body */
+body {
+    background-color: #ffe4e1;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Container styles */
+container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+}
+
+/* Thought text styles */
+.dancing-script-thought {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: black;
+    letter-spacing: 2px;
+    line-height: 1.8;
+    transition: color 0.4s ease, transform 0.8s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+/* Hover effect for the text */
+.dancing-script-thought:hover {
+    color: pink;
+    transform: scale(1.2);
+}
+
+/* Button styles */
+.josefin-sans-button {
+    font-family: "Josefin Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1rem;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    background-color: #6c63ff;
+    color: white;
+    cursor: pointer;
+    letter-spacing: 1.5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Hover effect for the button */
+.josefin-sans-button:hover {
+    background-color: #574b90;
+    transform: scale(1.05);
+}
+
+/* Responsive Design: Medium screens (below 768px) */
+@media (max-width: 768px) {
+
+    /* Container adjustments */
+    container {
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+    /* Text adjustments */
+    .dancing-script-thought {
+        font-size: 1.8rem;
+        line-height: 2;
+    }
+
+    /* Button adjustments */
+    .josefin-sans-button {
+        font-size: 0.9rem;
+        padding: 12px 20px;
+    }
+
+    /* Move text upwards only for responsive view */
+    .move-up {
+        transform: translateY(-80px);
+        /* Text moves up 80px */
+        transition: transform 0.5s ease-in-out;
+    }
+}
+
+/* Larger screens: Styles for container and shadow */
+@media (min-width: 768px) {
+    container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Prevent the text from moving up on larger screens */
+    .move-up {
+        transform: none;
+    }
+}
+
+/* Hide class to make the button disappear */
+.hide {
+    display: none;
+}
